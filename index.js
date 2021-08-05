@@ -14,15 +14,12 @@ function getRandomCat() {
 		});
 }
 
-function getRandomFox() {
+
+function getRandomFoxt() {
 	fetch('https://randomfox.ca/floof/')
 		.then(res => res.json())
 		.then(data => {
-			if(data.url.includes('.mp4')) {
-				getRandomFox();
-			}
-			else {
-				fox_result.innerHTML = `<img src=${data.url} alt="fox" />`;
-			}
+			fox_result.innerHTML = `<img src=${data.url} alt="fox" />`
 		});
 }
+	
